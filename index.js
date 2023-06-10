@@ -19,12 +19,12 @@ app.use("/genral",genralFormRouter);
 app.use("/contact",contactRouter);
 
 
-app.listen(4000,async()=>{
+app.listen(8080,async()=>{
     try {
         await connection;
         console.log("Connected to db");
     } catch (error) {
         console.log({ "error": error.message});
     }
-    console.log("server is running on port 4000");
+    console.log("server is running on port 8080");
 });
