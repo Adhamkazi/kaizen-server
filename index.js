@@ -1,5 +1,5 @@
 const express = require('express');
-const { connection } = require('./db');
+const { connection } = require('./db').default;
 const {genralFormRouter} = require('./Routes/GenralForm.route');
 const { contactRouter}  = require("./Routes/Contact.route");
 const cors = require('cors');
