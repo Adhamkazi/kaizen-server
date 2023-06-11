@@ -3,7 +3,6 @@ const { connection } = require('./db');
 const {genralFormRouter} = require('./Routes/GenralForm.route');
 const { contactRouter}  = require("./Routes/Contact.route");
 const cors = require('cors');
-require("dotenv").config();
 const app = express();
 app.use(express.json())
 //to aviod cors error in frontend
