@@ -8,26 +8,15 @@ const contactSchema = mongoose.Schema({
     phone:{type: 'number',required: true},
     company:{type: 'string',required: true},
     message:{type: 'String',required: true},
-    date: { type: 'string' },
+    date: {
+      type: 'Date',
+      default: () => new Date().toISOString().split('T')[0], 
+    },
 },{
 versionKey: false,
 });
 
-contactSchema.pre('save', function (next) {
-    if (!this.date) {
-      const currentDate = new Date().toLocaleString(undefined, {
-        month: 'numeric',
-        day: 'numeric',
-        year: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: true,
-      });
-      this.date = currentDate;
-    }
-    next();
-  });
-  
+
 const contactModal = mongoose.model("contact",contactSchema);
 
 

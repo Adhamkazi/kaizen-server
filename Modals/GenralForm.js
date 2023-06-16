@@ -11,7 +11,7 @@ const genralFormSchema = mongoose.Schema({
     message :{type:String,required:true},
     date: {
         type: 'Date',
-        default: () => new Date().toISOString().split('T')[0], // Extracting only the date portion
+        default: () => new Date().toISOString().split('T')[0], 
       },
 },{
     versionKey:false

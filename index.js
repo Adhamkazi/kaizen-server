@@ -1,6 +1,5 @@
 const express = require('express');
 const {connection} =require('./db')
-
 const {genralFormRouter} = require('./Routes/GenralForm.route');
 const { contactRouter}  = require("./Routes/Contact.route");
 const cors = require('cors');
